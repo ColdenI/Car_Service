@@ -1,0 +1,16 @@
+﻿<Window x:Name="window" x:Class="Car_Service.scr.admin.AdminPanelWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Car_Service.scr.admin"
+        mc:Ignorable="d"
+        Title="Панель Администратора" Height="374" Width="418" Icon="/logo.png" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <Button x:Name="button_order" Content="Заказы" HorizontalAlignment="Center" Margin="0,178,0,0" Width="200" FontFamily="Comic Sans MS" FontSize="20" Height="50" VerticalAlignment="Top" Click="button_order_Click"/>
+        <Button x:Name="button_user" Content="Персонал" Margin="0,105,0,0" Height="50" Width="200" FontFamily="Comic Sans MS" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top" Click="button_user_Click"/>
+        <Button x:Name="button_client" Content="Клиенты" HorizontalAlignment="Center" Margin="0,32,0,0" VerticalAlignment="Top" Height="50" Width="200" FontFamily="Comic Sans MS" FontSize="20" Click="button_client_Click"/>
+        <Button x:Name="button_posts" Content="Должности" HorizontalAlignment="Center" Margin="0,250,0,0" Width="200" FontFamily="Comic Sans MS" FontSize="20" Height="50" VerticalAlignment="Top" Click="button_posts_Click"/>
+
+    </Grid>
+</Window>

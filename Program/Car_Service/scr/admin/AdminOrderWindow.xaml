@@ -1,0 +1,42 @@
+﻿<Window x:Class="Car_Service.scr.admin.AdminOrderWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Car_Service.scr.admin"
+        mc:Ignorable="d"
+        Title="Заказы" Height="450" Width="800" Icon="/logo.png" WindowStartupLocation="CenterScreen" WindowState="Maximized">
+    <Window.Resources>
+        <Style x:Key="DataGridColumnSeparatorStyle" TargetType="DataGridCell">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Fill="Gray"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <DataGrid x:Name="dgv" AutoGenerateColumns="False" HorizontalGridLinesBrush="DarkGray" RowBackground="LightGray" AlternatingRowBackground="White" IsReadOnly="True" ScrollViewer.CanContentScroll="True" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Статус заказа" Binding="{Binding order_status}" />
+                <DataGridTextColumn Header="Описание проблемы" Binding="{Binding order_description}" />
+                <DataGridTemplateColumn MinWidth="0" Width="2" CellStyle="{StaticResource DataGridColumnSeparatorStyle}"/>
+                <DataGridTextColumn Header="Фамилия" Binding="{Binding lname}" />
+                <DataGridTextColumn Header="Имя" Binding="{Binding fname}" />
+                <DataGridTextColumn Header="Отчество" Binding="{Binding mname}" />
+                <DataGridTextColumn Header="Номер телефона" Binding="{Binding number_phone}" />
+                <DataGridTemplateColumn MinWidth="0" Width="2" CellStyle="{StaticResource DataGridColumnSeparatorStyle}"/>
+                <DataGridTextColumn Header="Марка" Binding="{Binding car_stamp}" />
+                <DataGridTextColumn Header="Модель" Binding="{Binding car_model}" />
+                <DataGridTextColumn Header="Год производства" Binding="{Binding car_year_release}" />
+                <DataGridTextColumn Header="Пробег" Binding="{Binding car_mileage}" />
+                <DataGridTextColumn Header="Номерной знак" Binding="{Binding car_license_plate_number}" />
+
+
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

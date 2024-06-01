@@ -1,0 +1,21 @@
+﻿<Window x:Class="Car_Service.scr.admin.AdminAddPostWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Car_Service.scr.admin"
+        mc:Ignorable="d"
+        Title="Новая должность" Height="345" Width="444" Icon="/logo.png" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Button x:Name="button_apply" Content="Добавить" Margin="0,0,10,10" VerticalAlignment="Bottom" Height="34" HorizontalAlignment="Right" Width="95" Click="button_apply_Click"/>
+        <Label Content="Название" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="14" RenderTransformOrigin="-1.008,-1.442" Width="199"/>
+        <TextBox x:Name="textBox_title" HorizontalAlignment="Left" Margin="214,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="207" FontSize="14" MaxLength="45"/>
+        <Label Content="Заработная плата" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top" FontSize="14" RenderTransformOrigin="-1.008,-1.442" Width="199"/>
+        <TextBox x:Name="textBox_wages" HorizontalAlignment="Left" Margin="214,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="207" FontSize="14" MaxLength="9"/>
+        <Label Content="Технический индекс доступа" HorizontalAlignment="Left" Margin="10,62,0,0" VerticalAlignment="Top" FontSize="14" RenderTransformOrigin="-1.008,-1.442" Width="199"/>
+        <TextBox x:Name="textBox_tech_name" HorizontalAlignment="Left" Margin="214,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="207" FontSize="14" MaxLength="8"/>
+        <Label Content="Описание" HorizontalAlignment="Left" Margin="10,88,0,0" VerticalAlignment="Top" FontSize="14" RenderTransformOrigin="-1.008,-1.442" Width="199"/>
+        <TextBox x:Name="textBox_des" HorizontalAlignment="Left" Margin="10,114,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="411" FontSize="14" Height="139" AcceptsReturn="True" MaxLength="300"/>
+
+    </Grid>
+</Window>

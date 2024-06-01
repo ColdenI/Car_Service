@@ -1,0 +1,21 @@
+﻿<Window x:Class="Car_Service.scr.admin.AdminPostsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Car_Service.scr.admin"
+        mc:Ignorable="d"
+        Title="Должности" Height="450" Width="800" Icon="/logo.png" WindowStartupLocation="CenterScreen" WindowState="Maximized">
+    <Grid>
+        <DataGrid x:Name="dgv" AutoGenerateColumns="False" HorizontalGridLinesBrush="DarkGray" RowBackground="LightGray" AlternatingRowBackground="White" IsReadOnly="True" ScrollViewer.CanContentScroll="True" Margin="0,25,0,0" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Должность" Binding="{Binding title}" />
+                <DataGridTextColumn Header="Описание" Binding="{Binding description}" />
+                <DataGridTextColumn Header="Заработная плата" Binding="{Binding wages}" />
+                <DataGridTextColumn Header="Технический индекс доступа" Binding="{Binding tech_name}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="button_addNewPost" Content="Добавить" HorizontalAlignment="Left" VerticalAlignment="Top" Width="104" Margin="2,2,0,0" Click="button_addNewPost_Click"/>
+
+    </Grid>
+</Window>

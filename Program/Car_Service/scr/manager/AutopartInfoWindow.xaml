@@ -1,0 +1,18 @@
+﻿<Window x:Class="Car_Service.scr.manager.AutopartInfoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Car_Service.scr.manager"
+        mc:Ignorable="d"
+        Title="О запчасти" Height="268" Width="625" Icon="/logo.png" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Label Content="Название" HorizontalAlignment="Left" Margin="10,9,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Label Content="Стоимость" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Label Content="Описание" HorizontalAlignment="Left" Margin="10,67,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Label x:Name="textBox_title" Content="Марка" Margin="131,9,10,0" VerticalAlignment="Top" FontSize="14"/>
+        <Label x:Name="textBox_cost" Content="Модель" Margin="131,38,10,0" VerticalAlignment="Top" FontSize="14"/>
+        <TextBox x:Name="textBox_des" Margin="10,96,10,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14" Height="121"/>
+
+    </Grid>
+</Window>

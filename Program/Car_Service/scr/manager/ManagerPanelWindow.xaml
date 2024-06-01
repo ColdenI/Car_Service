@@ -1,0 +1,31 @@
+﻿<Window x:Class="Car_Service.scr.manager.ManagerPanelWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Car_Service.scr.manager"
+        mc:Ignorable="d"
+        Title="Менеджер" Height="450" Width="910" Icon="/logo.png" WindowStartupLocation="CenterScreen" WindowState="Maximized">
+    <Grid>
+        <Button x:Name="button_addOrder" Content="Добавить заказ" HorizontalAlignment="Left" VerticalAlignment="Top" Click="button_addOrder_Click" Margin="3,3,0,0"/>
+        <Button x:Name="button_setStatus_End" Content="Изменить статус на &quot;Завершён&quot;" HorizontalAlignment="Left" Margin="97,3,0,0" VerticalAlignment="Top" Click="button_setStatus_End_Click"/>
+        <DataGrid x:Name="dgv" AutoGenerateColumns="False" HorizontalGridLinesBrush="DarkGray" RowBackground="LightGray" AlternatingRowBackground="White" Margin="0,26,0,0" IsReadOnly="True" ScrollViewer.CanContentScroll="True" SelectionChanged="dgv_SelectionChanged_1" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Фамилия" Binding="{Binding lname}" />
+                <DataGridTextColumn Header="Имя" Binding="{Binding fname}" />
+                <DataGridTextColumn Header="Отчество" Binding="{Binding mname}" />
+                <DataGridTextColumn Header="Статус" Binding="{Binding status}" />
+                <DataGridTextColumn Header="Номер телефона" Binding="{Binding number_phone}" />
+                <DataGridTextColumn Header="Описание" Binding="{Binding description}" />
+                <DataGridTextColumn Header="Машина" Binding="{Binding car}"  />
+                <DataGridTextColumn Header="Цена ремонта" Binding="{Binding cost}" />
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="button_update" Content="Обновить" HorizontalAlignment="Left" Margin="457,3,0,0" VerticalAlignment="Top" Click="button_update_Click" />
+        <Button x:Name="button_carInfo" Content="Информация о машине" HorizontalAlignment="Left" Margin="572,3,0,0" VerticalAlignment="Top" Click="button_carInfo_Click" />
+        <Button x:Name="button_malfunctionInfo" Content="Информация о неисправностях" HorizontalAlignment="Left" Margin="712,3,0,0" VerticalAlignment="Top" Click="button_malfunctionInfo_Click"  />
+        <Button x:Name="button_setStatus_cancel" Content="Изменить статус на &quot;Отменён&quot;" HorizontalAlignment="Left" Margin="280,3,0,0" VerticalAlignment="Top" Click="button_setStatus_cancel_Click"/>
+
+    </Grid>
+</Window>

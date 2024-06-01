@@ -1,0 +1,33 @@
+﻿<Window x:Class="Car_Service.scr.admin.AdminUserPanelWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Car_Service.scr.admin"
+        mc:Ignorable="d"
+        Title="Персонал" Height="450" Width="800" Icon="/logo.png" WindowStartupLocation="CenterScreen" WindowState="Maximized">
+    <Grid>
+        <DataGrid x:Name="dgv" AutoGenerateColumns="False" HorizontalGridLinesBrush="DarkGray" RowBackground="LightGray" AlternatingRowBackground="White" Margin="0,36,0,0" IsReadOnly="True" ScrollViewer.CanContentScroll="True" SelectionChanged="dgv_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Фамилия" Binding="{Binding Path=lname}" />
+                <DataGridTextColumn Header="Имя" Binding="{Binding Path=fname}" />
+                <DataGridTextColumn Header="Отчество" Binding="{Binding Path=mname}" />
+                <DataGridTextColumn Header="Дата рождения" Binding="{Binding Path=birth_date}" />
+                <DataGridTextColumn Header="Образование" Binding="{Binding Path=education}" />
+                <DataGridTextColumn Header="Должность" Binding="{Binding Path=post}" />
+                <DataGridTextColumn Header="Дата принятия на работу" Binding="{Binding Path=s_work_date}" />
+                <DataGridTextColumn Header="Дата увольнения" Binding="{Binding Path=e_work_date}" />
+                <DataGridTextColumn Header="Логин" Binding="{Binding Path=login}" />
+                <DataGridTextColumn Header="Пароль" Binding="{Binding Path=password}" />
+                <DataGridTextColumn Header="Заработная плата" Binding="{Binding Path=wages}" />
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="button_addUser" Content="Добавить" HorizontalAlignment="Left" Margin="6,6,0,0" VerticalAlignment="Top" Click="button_addUser_Click" Width="90"/>
+        <Button x:Name="button_editUser" Content="Изменить" HorizontalAlignment="Left" Margin="101,6,0,0" VerticalAlignment="Top" Width="90" Click="button_editUser_Click"/>
+        <Button x:Name="button_dismiss" Content="Уволить" HorizontalAlignment="Left" Margin="196,7,0,0" VerticalAlignment="Top" Width="90" Click="button_dismiss_Click"/>
+        <Button x:Name="button_reinstate" Content="Восстановить" HorizontalAlignment="Left" Margin="291,7,0,0" VerticalAlignment="Top" Width="90" Click="button_reinstate_Click"/>
+        <Button x:Name="button_update" Content="Обновить" HorizontalAlignment="Left" Margin="386,7,0,0" VerticalAlignment="Top" Click="button_update_Click" Width="90"/>
+
+    </Grid>
+</Window>

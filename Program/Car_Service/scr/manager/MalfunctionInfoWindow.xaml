@@ -1,0 +1,23 @@
+﻿<Window x:Class="Car_Service.scr.manager.MalfunctionInfoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Car_Service.scr.manager"
+        mc:Ignorable="d"
+        Title="О неисправности" Height="450" Width="800" Icon="/logo.png" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <DataGrid x:Name="dgv" AutoGenerateColumns="False" HorizontalGridLinesBrush="DarkGray" RowBackground="LightGray" AlternatingRowBackground="White" Margin="0,29,0,0" IsReadOnly="True" ScrollViewer.CanContentScroll="True" SelectionChanged="dgv_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Название" Binding="{Binding title}" />
+                <DataGridTextColumn Header="Описание" Binding="{Binding description}" />
+                <DataGridTextColumn Header="Запчасть" Binding="{Binding autopart}" />
+                <DataGridTextColumn Header="Стоимость работы" Binding="{Binding cost_work}" />
+                <DataGridTextColumn Header="Исполнитель" Binding="{Binding user_lfmname}" />
+                <DataGridTextColumn Header="Статус" Binding="{Binding status}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="button_autopartInfo" Content="Информация о запчасти" HorizontalAlignment="Left" Margin="5,4,0,0" VerticalAlignment="Top" Click="button_autopartInfo_Click" Width="179"/>
+
+    </Grid>
+</Window>

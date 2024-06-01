@@ -1,0 +1,19 @@
+﻿<Window x:Class="Car_Service.scr.personnel.AddNewAutopartWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Car_Service.scr.personnel"
+        mc:Ignorable="d"
+        Title="Новая запчасть" Height="237" Width="551" Icon="/logo.png" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Button x:Name="button_apply" Content="Добавить" Margin="0,0,6,7" Click="button_apply_Click" HorizontalAlignment="Right" Width="89" Height="34" VerticalAlignment="Bottom"/>
+        <Label Content="Название" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.045,1.112" Width="131" FontSize="14"/>
+        <Label Content="Описание" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.045,1.112" Width="131" FontSize="14"/>
+        <Label Content="Стоимость запчасти" HorizontalAlignment="Left" Margin="10,128,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.045,1.112" Width="146" FontSize="14"/>
+        <TextBox x:Name="textBox_title" Margin="156,14,6,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14" MaxLength="45"/>
+        <TextBox x:Name="textBox_des" Margin="156,40,6,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14" Height="87" MaxLength="300" AcceptsReturn="True"/>
+        <TextBox x:Name="textBox_cost" Margin="156,132,6,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14" MaxLength="9"/>
+
+    </Grid>
+</Window>

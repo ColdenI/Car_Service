@@ -1,0 +1,34 @@
+﻿<Window x:Class="Car_Service.scr.personnel.MainPersonnelWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Car_Service.scr.personnel"
+        mc:Ignorable="d"
+        Title="Заказы" Height="580" Width="1140" Icon="/logo.png" WindowStartupLocation="CenterScreen" WindowState="Maximized">
+    <Grid>
+        <Button x:Name="button_diagnostics" Content="Диагностика" HorizontalAlignment="Left" Margin="264,3,0,0" VerticalAlignment="Top" Click="Button_Click" Width="248"/>
+        <DataGrid x:Name="dgv" AutoGenerateColumns="False" HorizontalGridLinesBrush="DarkGray" RowBackground="LightGray" AlternatingRowBackground="White" Margin="0,78,0,0" IsReadOnly="True" ScrollViewer.CanContentScroll="True" SelectionChanged="dgv_SelectionChanged" HorizontalAlignment="Left" Width="512">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Статус" Binding="{Binding status}" />
+                <DataGridTextColumn Header="Описание" Binding="{Binding description}" />
+                <DataGridTextColumn Header="Машина" Binding="{Binding car}"  />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="button_carInfo" Content="Информация о машине" HorizontalAlignment="Left" Margin="0,53,0,0" VerticalAlignment="Top" Width="512" Click="button_carInfo_Click" />
+        <Button x:Name="buttonSetOrderStatus" Content="Изменить статус на &quot;Готово&quot;" HorizontalAlignment="Left" Margin="0,28,0,0" VerticalAlignment="Top" Width="512" Click="Button_Click_1"/>
+        <Button x:Name="button_update" Content="Обновить" HorizontalAlignment="Left" VerticalAlignment="Top" Click="button_update_Click" Width="256" Margin="0,3,0,0"/>
+        <DataGrid x:Name="dgv_" AutoGenerateColumns="False" HorizontalGridLinesBrush="DarkGray" RowBackground="LightGray" AlternatingRowBackground="White" Margin="526,53,2,0" IsReadOnly="True" ScrollViewer.CanContentScroll="True" SelectionChanged="dgv__SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Название" Binding="{Binding title}" />
+                <DataGridTextColumn Header="Описание" Binding="{Binding description}" />
+                <DataGridTextColumn Header="Запчасть" Binding="{Binding autopart}"  />
+                <DataGridTextColumn Header="Статус" Binding="{Binding status}"  />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="button_autopartInfo" Content="Информация о запчасти" Margin="526,3,2,0" VerticalAlignment="Top" Click="button_autopartInfo_Click" />
+        <Rectangle Margin="517,0,0,0" Stroke="Black" Fill="#FF565656" HorizontalAlignment="Left" Width="4"/>
+        <Button x:Name="button_setStatusMalfunction" Content="Изменить статус на &quot;Готово&quot;" Margin="526,28,2,0" VerticalAlignment="Top" Click="button_setStatusMalfunction_Click"  />
+
+    </Grid>
+</Window>

@@ -1,0 +1,22 @@
+﻿<Window x:Class="Car_Service.scr.manager.CarInfoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Car_Service.scr.manager"
+        mc:Ignorable="d"
+        Title="О машине" Height="204" Width="458" Icon="/logo.png" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Label Content="Марка" HorizontalAlignment="Left" Margin="10,9,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Label Content="Модель" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Label Content="Год" HorizontalAlignment="Left" Margin="10,67,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Label Content="Пробег" HorizontalAlignment="Left" Margin="10,96,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Label Content="Номерной знак" HorizontalAlignment="Left" Margin="10,125,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Label x:Name="textBox_stamp" Content="Марка" HorizontalAlignment="Left" Margin="131,9,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Label x:Name="textBox_model" Content="Модель" HorizontalAlignment="Left" Margin="131,38,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Label x:Name="textBox_year_release" Content="Год" HorizontalAlignment="Left" Margin="131,67,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Label x:Name="textBox_mileage" Content="Пробег" HorizontalAlignment="Left" Margin="131,96,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Label x:Name="textBox_license_plate_number" Content="Номерной знак" HorizontalAlignment="Left" Margin="131,125,0,0" VerticalAlignment="Top" FontSize="14"/>
+
+    </Grid>
+</Window>
